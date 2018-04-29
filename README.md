@@ -11,7 +11,7 @@
 
 
 
-## 1. Set-up and Log-ins
+## 1.0 Set-up and Log-ins
 
 ### 1.1 Google Earth Engine (GEE)
 
@@ -39,8 +39,6 @@ If you have not redeemed your education grant, click **[here](https://google.sec
 
 
 
-
-
 ##2.0 Earth Engine to Cloud
 
 ### 2.1 Generating Data in EE
@@ -53,7 +51,7 @@ link to code:
 
 Code runs in the console 
 
-The **Task** will light up in orange; click the tab. You will need click the run button to export the 'ndvi_test' to the cloud here. This may take a few minutes.
+The **Task** tab will light up in orange; click the tab. You will need click the run button to export the 'ndvi_test' to the cloud here. This may take a few minutes.
 
 
 
