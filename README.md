@@ -37,9 +37,7 @@ This should be the same account that you are using with GEE.
 
 If you have not redeemed your education grant, click **[here](https://google.secure.force.com/GCPEDU/?cid=d0GOdFV%2BTF1xdIizooBa1z8ehdyk91t3C51Dsuzk3BOlTJYPq0BfaE4gxD7ysKNK/)**. Use your OSU email to redeem the coupon. Make sure you are logged into the Cloud Platform with the same log-in as GEE. Then follow the instructions  **[here](https://console.cloud.google.com/education)** to redeem the coupon.
 
-
-
-##2.0 Earth Engine to Cloud
+## 2.0 Google Earth Engine to Cloud
 
 ### 2.1 Generating Data in EE
 
