@@ -91,7 +91,7 @@ Make sure the QTiles plugin is enabled. Click the plugins drop down menu. QTiles
 
 We now want to add our bucket from Google Cloud to the Tile Server. To do this open the browser panel in QGIS. Scroll Down to the **'Tile Server'**, right click, and click **'New Connection'**. The following window opens:
 
-![bucket](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/bucket.JPG)
+![tile server](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/tileserver_newconnection.JPG)
 
 In order to enter the tile layer we will navigate back to our bucket in Google cloud. Open the bucket. We need to open the index.html file, which is the last item in the bucket. Click index.html.
 
