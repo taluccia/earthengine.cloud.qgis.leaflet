@@ -57,7 +57,7 @@ On the right hand side of the GEE interface there are 3 tabs, Inspector, Console
 
 If it successfully exports to the cloud 'mapToCloudExample' will be highlighted blue and have check mark next to it.
 
-![success_maptocloudexport](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/images/success_maptocloudexport.jpg)
+![success_maptocloudexport](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/success_maptocloudexport.JPG)
 
 
 
@@ -65,11 +65,11 @@ If it successfully exports to the cloud 'mapToCloudExample' will be highlighted 
 
 Let's look at the data in the cloud.
 
-![cloud_platform](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/images/cloud_platform.jpg)
+![cloud_platform](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/cloud_platform.JPG)
 
 The bucket is where the map tiles from GEE engine appear.
 
-![bucket](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/images/bucket.jpg)
+![bucket](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/bucket.JPG)
 
 
 
@@ -91,7 +91,7 @@ Make sure the QTiles plugin is enabled. Click the plugins drop down menu. QTiles
 
 We now want to add our bucket from Google Cloud to the Tile Server. To do this open the browser panel in QGIS. Scroll Down to the **'Tile Server'**, right click, and click **'New Connection'**. The following window opens:
 
-![bucket](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/images/bucket.jpg)
+![bucket](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/bucket.JPG)
 
 In order to enter the tile layer we will navigate back to our bucket in Google cloud. Open the bucket. We need to open the index.html file, which is the last item in the bucket. Click index.html.
 
@@ -101,15 +101,15 @@ We need to open the source code. To do this make sure the source tab is selected
 
 We want to copy and paste the URL from the var tilePrefix (See Images Below).
 
-![index.html](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/images/index_code.jpg)
+![index.html](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/index_code.JPG)
 
-![URL](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/images/index_code_tileprefix.jpg)
+![URL](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/index_code_tileprefix.JPG)
 
 
 
 We will need to edit the URL slightly so it looks like this https://storage.googleapis.com/taluccia_gee/mapToCloudExample/{z}/{x}/{y}
 
-![Tile Server URL](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/images/tileserver_newconnection_URL.jpg)
+![Tile Server URL](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/tileserver_newconnection_URL.JPG)
 
 Then Click OK. The tile server then appears in the Browser Window. 
 
@@ -123,7 +123,7 @@ It is best if the raster you are working with occupies the extent of the canvas.
 
 Click the Plugins drop down, hover over QTiles to open the menu and select QTiles. The QTiles screen pops up.  Name the directory where you want to save your QTiles and provide a name for the Tileset. Select Canvas Extent and Zoom levels. In the Parameters make the **'Background transparency'** clear by changing the value to zero and make sure to select **'Write Leaflet-based viewer'**. Click Run.
 
-![QTiles](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/images/qtiles_to_leaflet.jpg)
+![QTiles](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/qtiles_to_leaflet.JPG)
 
 
 
