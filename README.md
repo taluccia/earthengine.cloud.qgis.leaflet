@@ -137,7 +137,13 @@ Add your tiles by right clicking the tile server, in the example here we would r
 
 Add a base map and zoom on the base map to you tile location. The **'zoom to layer'** function will not work on the tiles. Make sure you turn the base map off once you have located your tiles.  
 
-### 5.4 Tile Server to QTiles
+### 5.4 Canvas Extent
+
+Zoom into your tiles so that they fill most of the canvas space, see image below. The canvas is the extent we will use to generate QTiles. 
+
+![good_zoom URL](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/good_zoom.JPG)
+
+### 5.5 Tile Server to QTiles
 
 Now we need to take out tiles from Google Cloud and generate QTiles. 
 
