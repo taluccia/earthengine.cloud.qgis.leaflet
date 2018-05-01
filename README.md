@@ -83,7 +83,7 @@ In the mid-2000s, after Google Maps, Microsoft Virtual Earth (now Bing Maps), an
 
 The figure below shows how a tiled map consists of a "pyramid" of images covering the extent of the map across various scales. Tiled maps typically come with a level, row, and column numbering scheme that can be shared across caches to make sure that tile boundaries match up if you are overlaying two tile sets.
 
-![ Tile Pyramid](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/tile_pyramid.PNG)
+![ Tile Pyramid](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/tile_pyramid.png)
 
 > Tiled web maps take the form of a pyramid where the map is drawn at a progressive series of scale levels, with the smallest (zoomed out) scales using fewer tiles.
 
@@ -103,19 +103,17 @@ Open QGIS.
 
 ### 5.1 Install Plugins
 
-#### 5.11 QTiles Plugin
+#### 5.1.1 QTiles Plugin
 
 Make sure the QTiles plugin is enabled. Click the plugins drop down menu. QTiles should be listed at the bottom. If not then click the 'Manage and install Plugins...' and add QTiles.
 
-#### 5.12 QuickMapServices Plugin
+#### 5.1.2 QuickMapServices Plugin
 
 Make sure the QuickMapServices plugin is installed. Check this by clicking on the Web drop down menu If you are installing QuickMapServices Plugin, you will install, and then click on the Web tab, navigate to QuickMapServies and select Settings and then the tab for More Services. Then click **'Get Contibuted Pack'**. Click 'OK' for the pop-up window and then click 'Save.' Open a Reference Map (e.g., Bing).
 
 ### 5.2 Tile Server
 
-We now want to add our bucket from Google Cloud to the Tile Server. To do this open the browser panel in QGIS. Scroll Down to the **'Tile Server'**, right click, and click **'New Connection'**. The following window opens:
-
-![tile server](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/tileserver_newconnection.JPG)
+We now want to add our bucket from Google Cloud to the Tile Server. To do this open the browser panel in QGIS. Scroll Down to the **'Tile Server'**, right click, and click **'New Connection'**. A pop-up window should appear.
 
 In order to enter the tile layer we will navigate back to our bucket in Google cloud. Open the bucket. We need to open the index.html file, which is the last item in the bucket. Click index.html.
 
@@ -152,6 +150,10 @@ The raster you are working with needs to occupies the extent of the canvas (area
 Click the Plugins drop down, hover over QTiles to open the menu and select QTiles. The QTiles screen pops up.  Name the directory where you want to save your QTiles and provide a name for the Tileset. Select Canvas Extent and Zoom levels. In the Parameters make the **'Background transparency'** clear by changing the value to zero and make sure to select **'Write Leaflet-based viewer'**. Click Run.
 
 ![QTiles](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/qtiles_to_leaflet.JPG)
+
+
+
+> Note: the runtime is dependent on the size and number of zoom levels.
 
 
 
