@@ -11,25 +11,25 @@
 
 
 
-## 1.0 Set-up and Log-ins
+## 1 Set-up and Log-ins
 
-### 1.1 Google Earth Engine (GEE)
+We will begin by setting up Google Earth Engine and Google Cloud.
 
-GEE is *'a planetary-scale platform for Earth science data and analysis'*. Cloud based platform to query and process remotely sensed imagery such as Landsat, MODIS, Sentinel. Explore **[here](https://earthengine.google.com/)**.
-
-### 1.2 Log-in
+### 1.1 Google Earth Engine (GEE) Log-in
 
 New to Google Earth Engine (GEE), create a log-in by clicking **'SIGN UP'** in the upper right corner of the GEE page,  **[here](https://earthengine.google.com/)**. If you are a gmail user you can use your gmail log-in information. Already a GEE user you can also click on the **'SIGN UP'** in the upper right corner of GEE page,  **[here](https://earthengine.google.com/)**, to log-in.
 
-### 1.3 Google Cloud Platform Access Create an Account / Log-in
+### 1.2 Google Cloud Platform Access Create an Account / Log-in
 
 This should be the same account that you are using with GEE.
 
-### 1.4 Redeem Education Grant
+### 1.3 Redeem Education Grant
 
 If you have not redeemed your education grant, click **[here](https://google.secure.force.com/GCPEDU/?cid=d0GOdFV%2BTF1xdIizooBa1z8ehdyk91t3C51Dsuzk3BOlTJYPq0BfaE4gxD7ysKNK/)**. Use your OSU email to redeem the coupon. Make sure you are logged into the Cloud Platform with the same log-in as GEE. Then follow the instructions  **[here](https://console.cloud.google.com/education)** to redeem the coupon.
 
-## 2.0 Google Earth Engine 
+## 2 Google Earth Engine 
+
+GEE is *'a planetary-scale platform for Earth science data and analysis'*. Cloud based platform to query and process remotely sensed imagery such as Landsat, MODIS, Sentinel. Explore **[here](https://earthengine.google.com/)**.
 
 ### 2.1 Access GEE
 
@@ -43,7 +43,7 @@ GEE operates with javascript.
 
 GEE offers a number of resources and tools including code for certain tasks. Check out *'Get Started with Earth Engine'*,  **[here](https://developers.google.com/earth-engine/getstarted)**. 
 
-## 3.0 Google Earth Engine to Cloud
+## 3 Google Earth Engine to Cloud
 
 ### 3.1 Generating Data in EE
 
@@ -59,8 +59,6 @@ If it successfully exports to the cloud 'mapToCloudExample' will be highlighted 
 
 ![success_maptocloudexport](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/success_maptocloudexport.JPG)
 
-
-
 ### 3.2 Cloud
 
 Let's look at the data in the cloud.
@@ -75,9 +73,7 @@ The bucket is where the map tiles from GEE engine appear.
 
 This is essentially a temporary transfer in order to extract data that is generated in GEE and transfer it to QGIS where we can generated to tiles to use for geovisulaization purposes.
 
-## 4.0 Tiles: what they & how they work?
-
-### 4.1 Overview
+## 4 Tiles Overview
 
 In the mid-2000s, after Google Maps, Microsoft Virtual Earth (now Bing Maps), and other popular mapping applications hit the web, **people started to realize that maybe they didn't need the ability to tinker with the properties of every single layer**. These providers had started fusing their vector layers together in a single rasterized image that was divided into 256 x 256 pixel images, or tiles. These tiles were pregenerated and stored on disk for rapid distribution to clients. This was done out of necessity to support hundreds or thousands of simultaneous users, a burden too great for drawing the maps on the fly.
 
@@ -89,13 +85,13 @@ The figure below shows how a tiled map consists of a "pyramid" of images coverin
 
 Cartographers loved the tiled maps, because now they could invest all the tools of their trade into making an aesthetically pleasing web map without worrying about performance. Once you had created the tiles, you just had a set of images sitting on disk, and the server could retrieve a beautiful image just as fast as it could retrieve an ugly one. And because the tiled map images could be distributed so quickly by a web server, Google and others were able to employ **asynchronous JavaScript and XML (AJAX)** programming techniques to retrieve the tiles with no page blink as people panned.
 
-### 4.2 Things to think about
+### 4.1 Things to think about
 
 Tiles are not layers in terms of how we typically think about raster and vector layers when working in a GIS platform. Tiles need a base map to reference themselves. 
 
 
 
-## 5.0 QGIS
+## 5 QGIS
 
 QTiles is a plugin for QGIS - it only works with QGIS versions 2.0-2.99 - recommend version 2.18.19 (most stable). QGIS is an open source platform and is freely available. QGIS can be down loaded **[here](https://qgis.org/en/site/forusers/download.html#)**.
 
@@ -163,7 +159,7 @@ Additional help with QTiles can be found **[here](http://felix.rohrba.ch/en/2017
 
 
 
-## 6.0 Leaflet
+## 6 Leaflet
 
 Let's take a look at the leaflet output **[here](earthengine.cloud.qgis.leaflet/assets/eetest.html)**
 
