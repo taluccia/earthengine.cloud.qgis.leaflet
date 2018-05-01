@@ -75,19 +75,43 @@ The bucket is where the map tiles from GEE engine appear.
 
 This is essentially a temporary transfer in order to extract data that is generated in GEE and transfer it to QGIS where we can generated to tiles to use for geovisulaization purposes.
 
+## 4.0 Tiles: what they & how they work?
+
+###4.1 Overview
+
+In the mid-2000s, after Google Maps, Microsoft Virtual Earth (now Bing Maps), and other popular mapping applications hit the web, **people started to realize that maybe they didn't need the ability to tinker with the properties of every single layer**. These providers had started fusing their vector layers together in a single rasterized image that was divided into 256 x 256 pixel images, or tiles. These tiles were pregenerated and stored on disk for rapid distribution to clients. This was done out of necessity to support hundreds or thousands of simultaneous users, a burden too great for drawing the maps on the fly.
+
+The figure below shows how a tiled map consists of a "pyramid" of images covering the extent of the map across various scales. Tiled maps typically come with a level, row, and column numbering scheme that can be shared across caches to make sure that tile boundaries match up if you are overlaying two tile sets.
+
+![ Tile Pyramid](N:/geog371/lectures/lec14/img/tile_pyramid.png)
+
+> Tiled web maps take the form of a pyramid where the map is drawn at a progressive series of scale levels, with the smallest (zoomed out) scales using fewer tiles.
+
+Cartographers loved the tiled maps, because now they could invest all the tools of their trade into making an aesthetically pleasing web map without worrying about performance. Once you had created the tiles, you just had a set of images sitting on disk, and the server could retrieve a beautiful image just as fast as it could retrieve an ugly one. And because the tiled map images could be distributed so quickly by a web server, Google and others were able to employ **asynchronous JavaScript and XML (AJAX)** programming techniques to retrieve the tiles with no page blink as people panned.
+
+### 4.2 Things to think about
+
+Tiles are not layers in terms of how we typically think about raster and vector layers when working in a GIS platform. Tiles need a base map to reference themselves. 
 
 
-## 4.0 QGIS
+
+## 5.0 QGIS
 
 QTiles is a plugin for QGIS - it only works with QGIS versions 2.0-2.99 - recommend version 2.18.19 (most stable). QGIS is an open source platform and is freely available. QGIS can be down loaded **[here](https://qgis.org/en/site/forusers/download.html#)**.
 
 Open QGIS. 
 
-### 4.1 QTiles Plugin
+### 5.1 Install Plugins
+
+#### 5.11 QTiles Plugin
 
 Make sure the QTiles plugin is enabled. Click the plugins drop down menu. QTiles should be listed at the bottom. If not then click the 'Manage and install Plugins...' and add QTiles.
 
-### 4.2 Tile Server
+#### 5.12 QuickMapServices Plugin
+
+Make sure the QuickMapServices plugin is installed. Check this by clicking on the Web drop down menu If you are installing QuickMapServices Plugin, you will install, and then click on the Web tab, navigate to QuickMapServies and select Settings and then the tab for More Services. Then click **'Get Contibuted Pack'**. Click 'OK' for the pop-up window and then click 'Save.' Open a Reference Map (e.g., Bing).
+
+### 5.2 Tile Server
 
 We now want to add our bucket from Google Cloud to the Tile Server. To do this open the browser panel in QGIS. Scroll Down to the **'Tile Server'**, right click, and click **'New Connection'**. The following window opens:
 
@@ -113,13 +137,17 @@ We will need to edit the URL slightly so it looks like this https://storage.goog
 
 Then Click OK. The tile server then appears in the Browser Window. 
 
-You can add your tiles by right clicking the tile server, in the example here we would right click the **'eetest'**, and select add layer to add it to our map.
+Add your tiles by right clicking the tile server, in the example here we would right click the **'eetest'**, and select add layer to add it to our map.
 
-### 4.3 Tile Server to QTiles
+### 5.3 View Tiles
+
+Add a base map and zoom on the base map to you tile location. The **'zoom to layer'** function will not work on the tiles. Make sure you turn the base map off once you have located your tiles.  
+
+### 5.4 Tile Server to QTiles
 
 Now we need to take out tiles from Google Cloud and generate QTiles. 
 
-It is best if the raster you are working with occupies the extent of the canvas. Zoom in or out as needed
+The raster you are working with needs to occupies the extent of the canvas (area of visualization in Qgis). Zoom in or out as needed.
 
 Click the Plugins drop down, hover over QTiles to open the menu and select QTiles. The QTiles screen pops up.  Name the directory where you want to save your QTiles and provide a name for the Tileset. Select Canvas Extent and Zoom levels. In the Parameters make the **'Background transparency'** clear by changing the value to zero and make sure to select **'Write Leaflet-based viewer'**. Click Run.
 
@@ -133,7 +161,11 @@ Additional help with QTiles can be found **[here](http://felix.rohrba.ch/en/2017
 
 
 
-## 4.0 Leaflet
+## 6.0 Leaflet
 
 Let's take a look at the leaflet output **[here](earthengine.cloud.qgis.leaflet/assets/eetest.html)**
+
+![Leaflet](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/leaflet.JPG)
+
+For web mapping and geovisualization applications, the QTiles folder generated above in QGIS should become your assets folder on github. In the code you will need to adjust absolute pathnames to relative path names. 
 
