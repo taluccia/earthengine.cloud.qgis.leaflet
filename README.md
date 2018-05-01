@@ -77,13 +77,13 @@ This is essentially a temporary transfer in order to extract data that is genera
 
 ## 4.0 Tiles: what they & how they work?
 
-###4.1 Overview
+### 4.1 Overview
 
 In the mid-2000s, after Google Maps, Microsoft Virtual Earth (now Bing Maps), and other popular mapping applications hit the web, **people started to realize that maybe they didn't need the ability to tinker with the properties of every single layer**. These providers had started fusing their vector layers together in a single rasterized image that was divided into 256 x 256 pixel images, or tiles. These tiles were pregenerated and stored on disk for rapid distribution to clients. This was done out of necessity to support hundreds or thousands of simultaneous users, a burden too great for drawing the maps on the fly.
 
 The figure below shows how a tiled map consists of a "pyramid" of images covering the extent of the map across various scales. Tiled maps typically come with a level, row, and column numbering scheme that can be shared across caches to make sure that tile boundaries match up if you are overlaying two tile sets.
 
-![ Tile Pyramid](N:/geog371/lectures/lec14/img/tile_pyramid.png)
+![ Tile Pyramid](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/tile_pyramid.PNG)
 
 > Tiled web maps take the form of a pyramid where the map is drawn at a progressive series of scale levels, with the smallest (zoomed out) scales using fewer tiles.
 
