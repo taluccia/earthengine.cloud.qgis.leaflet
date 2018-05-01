@@ -161,9 +161,14 @@ Additional help with QTiles can be found **[here](http://felix.rohrba.ch/en/2017
 
 ## 6 Leaflet
 
-Let's take a look at the leaflet output **[here](earthengine.cloud.qgis.leaflet/assets/eetest.html)**
+Let's take a look at the leaflet output **[here](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/assets/eetest.html)**
 
 ![Leaflet](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/leaflet.JPG)
 
 For web mapping and geovisualization applications, the QTiles folder generated above in QGIS should become your assets folder on github. In the code you will need to adjust absolute pathnames to relative path names. 
 
+## Additional Examples
+
+GEE NDVI with color scheme export (coming soon...)
+
+GEE dNBR with color scheme export (coming soon...)
