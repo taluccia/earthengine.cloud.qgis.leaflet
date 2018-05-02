@@ -163,13 +163,25 @@ The file directory will contain your QTiles and an HTML document that can be int
 
 Additional help with QTiles can be found **[here](http://felix.rohrba.ch/en/2017/easily-add-tilemap-layers-qgis/)**.
 
+### 5.6 Navigate to QTiles folder
 
+Navigate to the output file after QTiles finishes running. In this folder will be your sub folders of tiles arranged by zoom level and an html document, in this example it is called eetest.html.
+
+Open the html and look at the source code. Copy the L.tilelayer variable that corresponds to your tile. 
+
+![L.tilelayer](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/L.tilelayer.JPG)
+
+This can be inserted into a new index.html with base map code to visualize.
 
 ## 6 Leaflet
 
-Let's take a look at the leaflet output **[here](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/assets/eetest.html)**
+Starting with a basic leaflet html add in your tile layer that you copied in the above step. Make sure it is added to your map variable.
 
-![Leaflet](https://github.com/taluccia/earthengine.cloud.qgis.leaflet/blob/master/images/leaflet.JPG)
+![leafletcode](images/leafletcode.JPG)
+
+
+
+![leafletmap](images/leafletmap.JPG)
 
 For web mapping and geovisualization applications, the QTiles folder generated above in QGIS should become your assets folder on github. In the code you will need to adjust absolute pathnames to relative path names. 
 
