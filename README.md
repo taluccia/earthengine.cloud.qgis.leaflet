@@ -189,8 +189,3 @@ For web mapping and geovisualization applications, the QTiles folder generated a
 
 Here is what the final output looks like **[here](http://taluccia.github.io/earthengine.cloud.qgis.leaflet)**
 
-## Additional Examples
-
-GEE NDVI with color scheme export (coming soon...)
-
-GEE dNBR with color scheme export (coming soon...)
