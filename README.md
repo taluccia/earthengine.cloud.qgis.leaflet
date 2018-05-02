@@ -177,13 +177,17 @@ This can be inserted into a new index.html with base map code to visualize.
 
 Starting with a basic leaflet html add in your tile layer that you copied in the above step. Make sure it is added to your map variable.
 
+For web mapping and geovisualization applications, the QTiles folder generated above in QGIS should become your assets folder on github. In the code you will need to adjust absolute pathnames to relative path names. 
+
 ![leafletcode](images/leafletcode.JPG)
 
 
 
 ![leafletmap](images/leafletmap.JPG)
 
-For web mapping and geovisualization applications, the QTiles folder generated above in QGIS should become your assets folder on github. In the code you will need to adjust absolute pathnames to relative path names. 
+
+
+Here is what the final output looks like **[here](http://taluccia.github.io/earthengine.cloud.qgis.leaflet)**
 
 ## Additional Examples
 
